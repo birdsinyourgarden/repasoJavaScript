@@ -8,3 +8,27 @@
 /* capitalizarPalabras(texto)
 texto = "hola mundo"
 Salia: Hola Mundo */ 
+
+function capitalizarPalabras(texto) {
+    let resultado = '';
+    let nuevaPalabra = true;
+
+    for (let i = 0; i < texto.length; i++) {
+        let letra = texto[i];
+
+        if (nuevaPalabra && letra !== ' ') {
+            letra = letra.toUpperCase();
+            nuevaPalabra = false;
+        }
+
+        resultado += letra;
+
+        if (letra === ' ') {
+            nuevaPalabra = true;
+        }
+    }
+
+    return resultado;
+}
+
+console.log(capitalizarPalabras("hola mundo"));

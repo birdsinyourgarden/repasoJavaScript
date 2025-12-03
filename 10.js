@@ -11,3 +11,16 @@
 Entrada: arr = [5, 2, 9, 1, 6]
 orden = "Asc"
 Salida: [1, 2, 5, 6, 9] */
+
+function ordenarArray(arr, orden) {
+    const resultado = arr.slice();
+    if (orden === "Asc") {
+        resultado.sort((a, b) => a - b);
+    } else if (orden === "Desc") {
+        resultado.sort((a, b) => b - a);
+    }
+    return resultado;
+}
+
+console.log(ordenarArray([5, 2, 9, 1, 6], "Asc"));
+console.log(ordenarArray([5, 2, 9, 1, 6], "Desc"));

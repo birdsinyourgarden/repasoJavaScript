@@ -18,5 +18,28 @@ out2: ef
 
 comparar("murciélago", "lagartija")
 out1: murciéo
-out2: rtj
+out2: tj
 */ 
+
+function comparar(str1, str2) {
+    let out1 = "";
+    let out2 = "";
+
+    for (let i = 0; i < str1.length; i++) {
+        if (!str2.includes(str1[i])) {
+            out1 += str1[i];
+        }
+    }
+
+    for (let i = 0; i < str2.length; i++) {
+        if (!str1.includes(str2[i])) {
+            out2 += str2[i];
+        }
+    }
+
+    console.log("out1:", out1);
+    console.log("out2:", out2);
+}
+
+comparar("abcd", "bcef"); 
+comparar("murciélago", "lagartija");
